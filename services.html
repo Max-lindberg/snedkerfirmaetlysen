@@ -6,6 +6,8 @@
     <meta name="description" content="Snedkerfirmaet Ly'sén Services - Vinduer, døre, køkkener, terrasser, totalrenovering og meget mere. 18+ års erfaring i Storkøbenhavn.">
     <meta name="keywords" content="snedker services, tømrer, vinduer, døre, køkken, bad, terrasse, renovering, København">
     <title>Services | Snedkerfirmaet Ly'sén</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="images/logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,8 +31,13 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-primary rounded flex items-center justify-center">
-                        <span class="text-secondary font-bold text-xl">SL</span>
+                    <div class="w-12 h-12 rounded overflow-hidden">
+                        <img src="images/logo.jpg" alt="Snedkerfirmaet Ly'sén logo"
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-12 h-12 bg-primary rounded flex items-center justify-center" style="display: none;">
+                            <span class="text-secondary font-bold text-xl">SL</span>
+                        </div>
                     </div>
                     <div>
                         <h1 class="text-lg font-bold">Snedkerfirmaet Ly'sén</h1>

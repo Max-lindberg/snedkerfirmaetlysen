@@ -6,6 +6,8 @@
     <meta name="description" content="Kontakt Snedkerfirmaet Ly'sén - Ring 20 81 59 88 for gratis tilbud. Hobrovej 63, Rødovre. Email: snedkerfirmaet@live.dk">
     <meta name="keywords" content="kontakt snedker, tilbud snedker, rødovre snedker, martin lysén kontakt">
     <title>Kontakt | Snedkerfirmaet Ly'sén</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="images/logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,8 +31,13 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-primary rounded flex items-center justify-center">
-                        <span class="text-secondary font-bold text-xl">SL</span>
+                    <div class="w-12 h-12 rounded overflow-hidden">
+                        <img src="images/logo.jpg" alt="Snedkerfirmaet Ly'sén logo"
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-12 h-12 bg-primary rounded flex items-center justify-center" style="display: none;">
+                            <span class="text-secondary font-bold text-xl">SL</span>
+                        </div>
                     </div>
                     <div>
                         <h1 class="text-lg font-bold">Snedkerfirmaet Ly'sén</h1>
