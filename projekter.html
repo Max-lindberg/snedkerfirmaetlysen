@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Se Snedkerfirmaet Ly'séns projekter - Vinduer, døre, køkkener, terrasser og renovering. Referencer fra tilfredse kunder i Storkøbenhavn.">
+    <meta name="keywords" content="snedker projekter, referencer, renovering, vinduer, døre, terrasse, køkken">
+    <title>Projekter & Referencer | Snedkerfirmaet Ly'sén</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a1a1a',
+                        'secondary': '#c0c0c0',
+                        'accent': '#333333',
+                        'light-gray': '#f5f5f5',
+                        'medium-gray': '#808080'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-primary">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white border-b-4 border-primary shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded flex items-center justify-center">
+                        <span class="text-secondary font-bold text-xl">SL</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold">Snedkerfirmaet Ly'sén</h1>
+                        <p class="text-xs text-medium-gray">Kvalitetshåndværk siden 2005</p>
+                    </div>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-primary hover:text-accent transition duration-300">Forside</a></li>
+                    <li><a href="services.html" class="text-primary hover:text-accent transition duration-300">Services</a></li>
+                    <li><a href="projekter.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Projekter</a></li>
+                    <li><a href="om-os.html" class="text-primary hover:text-accent transition duration-300">Om Os</a></li>
+                    <li><a href="kontakt.html" class="text-primary hover:text-accent transition duration-300">Kontakt</a></li>
+                </ul>
+                <div class="hidden md:flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:20815988" class="font-semibold">20 81 59 88</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200 mt-2">
+                <ul class="space-y-2 pt-4">
+                    <li><a href="index.html" class="block text-primary hover:text-accent transition duration-300 py-2">Forside</a></li>
+                    <li><a href="services.html" class="block text-primary hover:text-accent transition duration-300 py-2">Services</a></li>
+                    <li><a href="projekter.html" class="block text-primary font-semibold py-2">Projekter</a></li>
+                    <li><a href="om-os.html" class="block text-primary hover:text-accent transition duration-300 py-2">Om Os</a></li>
+                    <li><a href="kontakt.html" class="block text-primary hover:text-accent transition duration-300 py-2">Kontakt</a></li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="tel:20815988" class="flex items-center space-x-2 text-primary font-semibold">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>20 81 59 88</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Vores Projekter</h1>
+            <p class="text-xl text-secondary max-w-3xl">
+                Se eksempler på vores arbejde gennem årene. Vi er stolte af hvert eneste projekt og den tillid vores kunder viser os.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-light-gray sticky top-20 z-30">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-6 py-2 bg-primary text-white rounded-lg font-semibold">Alle</button>
+                <button class="px-6 py-2 bg-white text-primary border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition">Vinduer & Døre</button>
+                <button class="px-6 py-2 bg-white text-primary border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition">Køkken & Bad</button>
+                <button class="px-6 py-2 bg-white text-primary border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition">Terrasser</button>
+                <button class="px-6 py-2 bg-white text-primary border border-gray-300 rounded-lg hover:bg-primary hover:text-white transition">Totalrenovering</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 - Terrasse Vig -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
+                        <img src="images/terrasse-vig.jpg" alt="Terrasse projekt i Vig med bangkirai træ"
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300" style="display: none;">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Terrasse
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Terrasse i Vig</h3>
+                        <p class="text-gray-600 mb-4">
+                            Komplet terrasseopbygning fra bund med punktfundamenter og bangkirai terrassebrædder.
+                            Lys grå eternit kantafslutning.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2025</span>
+                            <span class="text-sm font-semibold text-primary">Bangkirai træ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Vinduer Ishøj -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
+                        <img src="images/vinduer-ishoej.jpg" alt="Nye vinduer og døre monteret i Ishøj"
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300" style="display: none;">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Vinduer & Døre
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Nye vinduer og døre i Ishøj</h3>
+                        <p class="text-gray-600 mb-4">
+                            Totaludskiftning af vinduer og døre i parcelhus. Energivinduer med 3-lags glas for optimal isolering.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2025</span>
+                            <span class="text-sm font-semibold text-primary">Energivinduer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Køkkenrenovering -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Køkken
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Køkkenrenovering København</h3>
+                        <p class="text-gray-600 mb-4">
+                            Komplet køkkenrenovering med nye skuffer, låger og bordplade i sildebensmønster parket.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2024</span>
+                            <span class="text-sm font-semibold text-primary">Totalrenovering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Plankeværk -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Udendørs
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Nyt plankeværk Rødovre</h3>
+                        <p class="text-gray-600 mb-4">
+                            Opsætning af nyt plankeværk i Cumaru træ. Holdbar løsning med minimal vedligeholdelse.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2024</span>
+                            <span class="text-sm font-semibold text-primary">Cumaru træ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Rumdeler -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Specialarbejde
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mobil rumdeler</h3>
+                        <p class="text-gray-600 mb-4">
+                            Specialfremstillet rumdeler på hjul. Fleksibel løsning til kontor eller bolig.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2023</span>
+                            <span class="text-sm font-semibold text-primary">Specialløsning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Totalrenovering -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Totalrenovering
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Totalrenovering lejlighed</h3>
+                        <p class="text-gray-600 mb-4">
+                            Komplet renovering af 3-værelses lejlighed inkl. køkken, bad og nye gulve.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2024</span>
+                            <span class="text-sm font-semibold text-primary">København</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 - Parkbænke -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Møbler
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Parkbænke i mahogni</h3>
+                        <p class="text-gray-600 mb-4">
+                            Specialfremstillede parkbænke med stålstel og mahogni sæde til offentligt område.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2023</span>
+                            <span class="text-sm font-semibold text-primary">Mahogni</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 - Facade -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Facade
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Facaderenovering sommerhus</h3>
+                        <p class="text-gray-600 mb-4">
+                            Ny træbeklædning og isolering af sommerhus facade. Vedligeholdelsesfri løsning.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2023</span>
+                            <span class="text-sm font-semibold text-primary">Sommerhus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 - Badeværelse -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Badeværelse
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Badeværelsesrenovering</h3>
+                        <p class="text-gray-600 mb-4">
+                            Totalrenovering af badeværelse med nye fliser, sanitet og specialbygget møbel.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-medium-gray">2024</span>
+                            <span class="text-sm font-semibold text-primary">Totalrenovering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent transition duration-300">
+                    Se flere projekter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Kundernes ord</h2>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+                    </svg>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Vi er meget tilfredse med både kvalitet, vejledning og pris. Martin og hans team overholder altid aftaler
+                        og færdiggør projekter til tiden. Super god service og bruger kvalitetsmaterialer med gode anbefalinger.
+                    </p>
+                    <p class="font-semibold text-primary">- Familie Jensen, København</p>
+                    <div class="flex justify-center mt-4">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Start dit projekt i dag</h2>
+            <p class="text-xl text-secondary mb-8 max-w-2xl mx-auto">
+                Lad os hjælpe dig med at realisere dit næste projekt. Kontakt os for gratis og uforpligtende tilbud.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:20815988" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-light-gray transition duration-300 flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    Ring 20 81 59 88
+                </a>
+                <a href="kontakt.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    Få tilbud
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-secondary py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Snedkerfirmaet Ly'sén</h4>
+                    <p class="mb-2">v/Martin Halberg Lysén</p>
+                    <p class="mb-2">CVR: 28390149</p>
+                    <p>Medlem af Dansk Byggeri</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition">Vinduer & Døre</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Køkken & Bad</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Terrasser</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Totalrenovering</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontakt</h4>
+                    <p class="mb-2">Telefon: <a href="tel:20815988" class="hover:text-white transition">20 81 59 88</a></p>
+                    <p class="mb-2">Email: <a href="mailto:snedkerfirmaet@live.dk" class="hover:text-white transition">snedkerfirmaet@live.dk</a></p>
+                    <p>Hobrovej 63, 2610 Rødovre</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Åbningstider</h4>
+                    <p class="mb-2">Mandag - Fredag: 07:00 - 16:00</p>
+                    <p class="mb-2">Lørdag: Efter aftale</p>
+                    <p>Søndag: Lukket</p>
+                </div>
+            </div>
+            <div class="border-t border-accent pt-8">
+                <p class="text-center">&copy; 2026 Snedkerfirmaet Ly'sén. Alle rettigheder forbeholdes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

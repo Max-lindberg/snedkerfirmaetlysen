@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Snedkerfirmaet Ly'sén Services - Vinduer, døre, køkkener, terrasser, totalrenovering og meget mere. 18+ års erfaring i Storkøbenhavn.">
+    <meta name="keywords" content="snedker services, tømrer, vinduer, døre, køkken, bad, terrasse, renovering, København">
+    <title>Services | Snedkerfirmaet Ly'sén</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a1a1a',
+                        'secondary': '#c0c0c0',
+                        'accent': '#333333',
+                        'light-gray': '#f5f5f5',
+                        'medium-gray': '#808080'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-primary">
+    <!-- Navigation (samme som index.html) -->
+    <nav class="fixed top-0 w-full bg-white border-b-4 border-primary shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded flex items-center justify-center">
+                        <span class="text-secondary font-bold text-xl">SL</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold">Snedkerfirmaet Ly'sén</h1>
+                        <p class="text-xs text-medium-gray">Kvalitetshåndværk siden 2005</p>
+                    </div>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-primary hover:text-accent transition duration-300">Forside</a></li>
+                    <li><a href="services.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Services</a></li>
+                    <li><a href="projekter.html" class="text-primary hover:text-accent transition duration-300">Projekter</a></li>
+                    <li><a href="om-os.html" class="text-primary hover:text-accent transition duration-300">Om Os</a></li>
+                    <li><a href="kontakt.html" class="text-primary hover:text-accent transition duration-300">Kontakt</a></li>
+                </ul>
+                <div class="hidden md:flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:20815988" class="font-semibold">20 81 59 88</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200 mt-2">
+                <ul class="space-y-2 pt-4">
+                    <li><a href="index.html" class="block text-primary hover:text-accent transition duration-300 py-2">Forside</a></li>
+                    <li><a href="services.html" class="block text-primary font-semibold py-2">Services</a></li>
+                    <li><a href="projekter.html" class="block text-primary hover:text-accent transition duration-300 py-2">Projekter</a></li>
+                    <li><a href="om-os.html" class="block text-primary hover:text-accent transition duration-300 py-2">Om Os</a></li>
+                    <li><a href="kontakt.html" class="block text-primary hover:text-accent transition duration-300 py-2">Kontakt</a></li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="tel:20815988" class="flex items-center space-x-2 text-primary font-semibold">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>20 81 59 88</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Vores Services</h1>
+            <p class="text-xl text-secondary max-w-3xl">
+                Vi tilbyder et bredt udvalg af snedker- og tømrerservices. Fra små reparationer til store renoveringsprojekter -
+                vi har ekspertisen og erfaringen til at løse dine opgaver.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Vinduer & Døre -->
+            <div class="mb-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full mb-6">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm font-semibold">GRATIS opmåling og tilbud</span>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-6">Vinduer & Døre</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Vi er specialister i montering og udskiftning af vinduer og døre. Vores erfarne team sikrer professionel
+                            installation med fokus på energieffektivitet og æstetik.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Velux ovenlys vinduer</h4>
+                                    <p class="text-gray-600">Installation og udskiftning af Velux vinduer inkl. inddækning</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Københavnervinduer</h4>
+                                    <p class="text-gray-600">Specialister i montering af klassiske københavnervinduer</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Energivinduer</h4>
+                                    <p class="text-gray-600">Moderne energieffektive løsninger der sparer på varmeregningen</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Specialdøre og porte</h4>
+                                    <p class="text-gray-600">Skræddersyede døre og porte til alle formål</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="kontakt.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent transition duration-300">
+                            Få tilbud på vinduer & døre
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-light-gray rounded-2xl p-12 text-center">
+                        <svg class="w-32 h-32 mx-auto text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        <p class="text-2xl font-bold text-primary">Energibesparelse op til 30%</p>
+                        <p class="text-gray-600 mt-2">Med nye energivinduer</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-200 my-20">
+
+            <!-- Køkken & Bad -->
+            <div class="mb-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 bg-light-gray rounded-2xl p-12 text-center">
+                        <svg class="w-32 h-32 mx-auto text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        <p class="text-2xl font-bold text-primary">Totalrenovering</p>
+                        <p class="text-gray-600 mt-2">Fra idé til færdigt resultat</p>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h2 class="text-4xl font-bold mb-6">Køkken & Badeværelse</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Vi renoverer og moderniserer køkkener og badeværelser med fokus på funktionalitet, æstetik og holdbarhed.
+                            Alt arbejde udføres med høj kvalitet og finish.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4">
+                                <h4 class="font-semibold mb-2">Køkkenrenovering</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Nye skuffer og låger</li>
+                                    <li>• Bordplader i alle materialer</li>
+                                    <li>• Sokler og lister</li>
+                                    <li>• Specialløsninger</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4">
+                                <h4 class="font-semibold mb-2">Badeværelse</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Komplet renovering</li>
+                                    <li>• Vægge og gulve</li>
+                                    <li>• Skabe og hylder</li>
+                                    <li>• Fugning og finish</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="kontakt.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent transition duration-300">
+                            Start dit køkken/bad projekt
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-200 my-20">
+
+            <!-- Terrasse & Udendørs -->
+            <div class="mb-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Terrasse & Udendørs</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Vi bygger terrasser fra bund med kvalitetsmaterialer som Bangkirai, Cumaru og komposit.
+                            Vores løsninger er designet til at holde i mange år med minimal vedligeholdelse.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Punktfundamenter og bærekonstruktion</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Premium hårdttræ (Bangkirai, Cumaru)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Komposit terrasser - vedligeholdelsesfri</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Plankeværk og hegn</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Eternit kantafslutninger</span>
+                            </div>
+                        </div>
+                        <div class="bg-primary text-white rounded-lg p-6 mb-6">
+                            <p class="font-semibold mb-2">Kvalitetsmaterialer</p>
+                            <p class="text-secondary">Vi bruger kun certificeret træ og materialer der tåler det danske vejr</p>
+                        </div>
+                        <a href="kontakt.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent transition duration-300">
+                            Få tilbud på terrasse
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-light-gray rounded-lg p-6 text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">15+</div>
+                            <p class="text-sm text-gray-600">Års holdbarhed med garanti</p>
+                        </div>
+                        <div class="bg-light-gray rounded-lg p-6 text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">100%</div>
+                            <p class="text-sm text-gray-600">FSC certificeret træ</p>
+                        </div>
+                        <div class="bg-light-gray rounded-lg p-6 text-center col-span-2">
+                            <div class="text-3xl font-bold text-primary mb-2">Anti-slip</div>
+                            <p class="text-sm text-gray-600">Sikre overflader for hele familien</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Andre Services -->
+    <section class="py-20 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Øvrige Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Vi tilbyder også en række andre snedker- og tømrerservices
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Totalrenovering -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Totalrenovering</h3>
+                    <p class="text-gray-600 mb-4">
+                        Komplet renovering af lejligheder, huse og sommerhuse. Vi styrer hele processen fra start til slut.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Projektledelse</li>
+                        <li>• Koordinering af håndværkere</li>
+                        <li>• Kvalitetskontrol</li>
+                        <li>• Færdigmelding</li>
+                    </ul>
+                </div>
+
+                <!-- Specialarbejde -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Specialarbejde</h3>
+                    <p class="text-gray-600 mb-4">
+                        Skræddersyede løsninger og specialfremstillede møbler efter dine ønsker og behov.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Indbyggede skabe</li>
+                        <li>• Rumdeler løsninger</li>
+                        <li>• Special møbler</li>
+                        <li>• Skjulte installationer</li>
+                    </ul>
+                </div>
+
+                <!-- Små reparationer -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Små Reparationer</h3>
+                    <p class="text-gray-600 mb-4">
+                        Ingen opgave er for lille. Vi hjælper med alle typer reparationer og vedligeholdelse.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Justering af døre</li>
+                        <li>• Reparation af møbler</li>
+                        <li>• Udskiftning af beslag</li>
+                        <li>• Diverse småopgaver</li>
+                    </ul>
+                </div>
+
+                <!-- Gulve -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gulve</h3>
+                    <p class="text-gray-600 mb-4">
+                        Installation og renovering af alle typer gulve med fokus på kvalitet og finish.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Trægulve</li>
+                        <li>• Parket og sildebensmønster</li>
+                        <li>• Laminat og vinyl</li>
+                        <li>• Gulvafslibning</li>
+                    </ul>
+                </div>
+
+                <!-- Facade -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Facade</h3>
+                    <p class="text-gray-600 mb-4">
+                        Facaderenovering og vedligeholdelse for både private og erhverv.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Træbeklædning</li>
+                        <li>• Vedligeholdelse</li>
+                        <li>• Isolering</li>
+                        <li>• Malerarbejde</li>
+                    </ul>
+                </div>
+
+                <!-- Erhverv -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Erhverv</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professionelle løsninger til erhvervskunder med fokus på funktionalitet og deadlines.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Kontorlokaler</li>
+                        <li>• Butikker</li>
+                        <li>• Serviceaftaler</li>
+                        <li>• Akut service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Få et uforpligtende tilbud</h2>
+            <p class="text-xl text-secondary mb-8 max-w-2xl mx-auto">
+                Vi tilbyder altid gratis opmåling og tilbud. Kontakt os i dag og lad os hjælpe med dit projekt.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:20815988" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-light-gray transition duration-300 flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    Ring 20 81 59 88
+                </a>
+                <a href="kontakt.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    Send en besked
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-secondary py-12 border-t-4 border-accent">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Snedkerfirmaet Ly'sén</h4>
+                    <p class="mb-2">v/Martin Halberg Lysén</p>
+                    <p class="mb-2">CVR: 28390149</p>
+                    <p>Medlem af Dansk Byggeri</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Vinduer & Døre</a></li>
+                        <li><a href="#" class="hover:text-white transition">Køkken & Bad</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terrasser</a></li>
+                        <li><a href="#" class="hover:text-white transition">Totalrenovering</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontakt</h4>
+                    <p class="mb-2">Telefon: <a href="tel:20815988" class="hover:text-white transition">20 81 59 88</a></p>
+                    <p class="mb-2">Email: <a href="mailto:snedkerfirmaet@live.dk" class="hover:text-white transition">snedkerfirmaet@live.dk</a></p>
+                    <p>Hobrovej 63, 2610 Rødovre</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Åbningstider</h4>
+                    <p class="mb-2">Mandag - Fredag: 07:00 - 16:00</p>
+                    <p class="mb-2">Lørdag: Efter aftale</p>
+                    <p>Søndag: Lukket</p>
+                </div>
+            </div>
+            <div class="border-t border-accent pt-8">
+                <p class="text-center">&copy; 2026 Snedkerfirmaet Ly'sén. Alle rettigheder forbeholdes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
