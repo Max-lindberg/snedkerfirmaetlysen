@@ -45,13 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced form handling for contact page
+    // Enhanced form handling for contact page with Formspree
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
+            // Get form data for validation only
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
 
@@ -81,16 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (!isValid) {
+                e.preventDefault(); // Only prevent submission if validation fails
                 alert('Fejl i formularen:\n\n' + errorMessage);
                 return;
             }
 
-            // Show success message
-            const name = `${data.firstName} ${data.lastName}`;
-            alert(`Tak for din henvendelse, ${name}!\n\nVi har modtaget dine oplysninger og vil kontakte dig inden for 24 timer på telefon ${data.phone} eller email ${data.email}.\n\nVenlig hilsen\nSnedkerfirmaet Ly'sén`);
-
-            // Reset form
-            contactForm.reset();
+            // If validation passes, let Formspree handle the submission
+            // The form will submit normally to Formspree
         });
     }
 
